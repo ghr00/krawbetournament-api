@@ -6,7 +6,6 @@ const expressjwt = require('express-jwt');
 const jwt = require('jsonwebtoken');
 require('dotenv').config()
 
-console.log('secret:' + process.env.SECRET)
 const hash = crypto.createHmac('sha256', process.env.SECRET)
 
 const cookieParser = require('cookie-parser');
@@ -24,6 +23,8 @@ try {
   } 
 
 const { Schema } = mongoose;
+
+var guard = require('express-jwt-permissions')()
 
 const userSchema = new Schema({
     name:  String,
