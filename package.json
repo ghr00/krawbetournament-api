@@ -5,6 +5,9 @@
   "main": "app.js",
   "author": "Ghurab00",
   "license": "MIT",
+  "scripts": {
+    "start": "node app.js"    
+  },
   "dependencies": {
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
